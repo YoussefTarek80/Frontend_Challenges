@@ -1,5 +1,6 @@
 <template>
-    <section class="flex flex-wrap gap-5 sm:w-4/12 w-full my-6 items-center justify-center">
+    <section class="flex flex-wrap gap-5 sm:w-5/12 w-full my-6 items-center justify-center relative">
+        <div class="absolute"> <img src="../assets/images/bg-triangle.svg" alt=""></div>
         <div 
             v-for="item in list" 
             :key="item.id" 
