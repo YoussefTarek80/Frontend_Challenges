@@ -20,7 +20,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import SideBar from './components/SideBar.vue'
+import SideBar from './components/sideBar.vue'
 import btns from './components/btn.vue'
 
 import YourInfo from './views/info.vue'
