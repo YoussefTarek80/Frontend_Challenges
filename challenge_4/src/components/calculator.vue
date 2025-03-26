@@ -25,11 +25,11 @@
                         >
                 </div>
             </div>
-            <div class="flex flex-wrap sm:gap-4 gap-2">
-                <div class="flex flex-col sm:flex-1 ">
+            <div class="flex flex-wrap sm:gap-4 gap-2 w-full">
+                <div class="flex flex-col sm:flex-1  w-full">
                     <label for="mortgageTerm" class="label">Mortgage Term</label>
-                    <div class="relative">
-                        <input type="text" id="mortgageTerm" v-model="mortgageTerm" class="input p-2 pr-10 outline-none">
+                    <div class="relative ">
+                        <input type="text" id="mortgageTerm" v-model="mortgageTerm" class="input p-2 pr-10 outline-none ">
                         <span 
                             class="absolute rounded-tr-md rounded-br-md inset-y-0 right-0 px-3 border-2 border-t-[#73A1C1] border-b-[#73A1C1] border-r-[#73A1C1] flex items-center 
                                 text-slate-700 font-medium transition-colors bg-[#D6E7F2]"
@@ -39,7 +39,7 @@
                     </div>
    
                 </div>
-                <div class="flex flex-col sm:flex-1 ">
+                <div class="flex flex-col sm:flex-1 w-full">
                     <label for="interestRate" class="label">interest Rate</label>
                     <div class="relative">
                         <input type="text" id="interestRate" v-model="interestRate" class="input p-2 pr-10 outline-none">

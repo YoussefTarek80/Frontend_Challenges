@@ -1,10 +1,10 @@
 <template>
-    <div class="flex items-center justify-center min-h-screen  bg-gray-100 p-4 ">
-        <div class="window grid sm:grid-cols-2 grid-cols-1  w-9/12 bg-white shadow-lg  ">
+    <div class="flex items-center justify-center min-h-screen  bg-gray-100 sm:p-4 ">
+        <div class="window grid sm:grid-cols-2 grid-cols-1  sm:w-9/12 bg-white shadow-lg  ">
             <div class="col-span-1 ">
                 <calculator @updateMonthlyPayment="updatePayment" @updateTotalPayment="updateTotal"></calculator>
             </div>
-            <div class="col-span-1 bg-[#0E2A3A] borderRadius">
+            <div class="col-span-1 bg-[#0E2A3A] sm:rounded-bl-[80px] sm:rounded-tr-[15px] sm:rounded-br-[15px]">
                 <results :monthlyPayment="monthlyPayment" :total="TotalRepay"></results>
             </div>
         </div>
@@ -27,9 +27,6 @@
 </script>
 
 <style scoped>
-.borderRadius {
-    border-bottom-left-radius: 80px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
+
+
 </style>
