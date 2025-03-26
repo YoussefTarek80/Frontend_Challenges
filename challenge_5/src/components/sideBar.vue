@@ -7,7 +7,7 @@
                 :key="page.id"
             >
                 <div 
-                    class="border-2 border-white text-white rounded-full sm:w-10 sm:h-10 w-8 h-8 flex items-center justify-center text-lg"
+                    class="border-2 border-white  rounded-full sm:w-10 sm:h-10 w-8 h-8 flex items-center justify-center text-lg"
                     :class="{ 'bg-white text-black': activePage === page.id-1 }"
                 >
                     {{ page.id }}
