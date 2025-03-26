@@ -8,7 +8,11 @@
             </aside>
             <main class="col-span-3 sm:p-10 sm:m-0 m-5 h-full bg-white rounded-xl  flex flex-col z-10 mt-24 sm:mt-0 ">
                 <div class="flex-grow sm:p-5 sm:m-0 rounded-xl h-full  ">
-                    <component :is="currentPageComponent"  class="sm:px-0 sm:py-0 px-5 py-10 h-full"/>
+                    <component 
+                        :is="currentPageComponent"  
+                        class="sm:px-0 sm:py-0 px-5 py-10 h-full"
+                        :all_information="all_information" 
+                    />
                 </div>
                 <div class="mt-auto" v-if="!showThankYou">
                     <btns @next="nextPage" @previous="prevPage" :currentPage="currentPage" @confirmed="showThanks" />
@@ -33,6 +37,14 @@ const pages = [YourInfo, SelectPlan, AddOns, Summary]
 const currentPage = ref(0)
 const showThankYou = ref(false)
 
+const all_information =ref({
+    name: '',
+    email: '',
+    phone: '',
+    plan:'',
+    billing:'Monthly',
+    services:[]
+})
 const currentPageComponent = computed(() => {
     return showThankYou.value ? Thanks : pages[currentPage.value]
 })
