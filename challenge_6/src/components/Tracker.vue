@@ -49,23 +49,24 @@
 
   const mapStore = useMapStore();
   
-  const fetchIPDetails = async () => {
-    if (!ipAddress.value) return;
-    
-    try {
-      const response = await fetch(`http://ip-api.com/json/${ipAddress.value}`);
-      const data = await response.json();
-      
-      if (data.status === "success") {
-        ipData.value = data;
-        mapStore.updateLocation(data.lat, data.lon);
-      } else {
-        alert("Invalid IP Address!");
-      }
-    } catch (error) {
-      console.error("Error fetching IP details:", error);
+const fetchIPDetails = async () => {
+  if (!ipAddress.value) return;
+
+  try {
+    const response = await fetch(`https://ip-api.com/json/${ipAddress.value}`);
+    const data = await response.json();
+
+    if (data.status === "success") {
+      ipData.value = data;
+      mapStore.updateLocation(data.lat, data.lon);
+    } else {
+      alert("Invalid IP Address!");
     }
-  };
+  } catch (error) {
+    console.error("Error fetching IP details:", error);
+  }
+};
+
   </script>
   
   <style scoped>
