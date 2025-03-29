@@ -19,7 +19,7 @@
         </span>
       </div>
   
-      <div class="results shadow-lg flex items-center w-11/12 justify-center gap-10 p-5 bg-white rounded-xl relative top-10">
+      <div class="results shadow-lg flex flex-wrap items-center w-11/12 justify-between gap-10 p-5 bg-white rounded-xl relative sm:top-10 top-40">
         <div class="p-5 flex flex-col justify-between ">
           <div class="text-gray-400 font-extrabold text-sm tracking-[1px]">IP ADDRESS</div>
           <div class="text-3xl font-semibold">{{ ipData.query || "N/A" }}</div>
